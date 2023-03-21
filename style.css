@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 500px;
+    height: 500px;
+    background-color: cadetblue;
+    margin: auto;
+    margin-top: 50px;
+    animation-name: anime;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    /* animation-timing-function: linear; */
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: brown;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation-name: my-anime;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    /* animation-timing-function: linear; */
+}
+h1{
+    color: white;
+}
+@keyframes anime{
+    25%{
+        background-color: cadetblue;
+        transform: rotate(45deg);
+    }
+    50%{
+        background-color: gold;
+        transform: rotate(90deg);
+    }
+    75%{
+        background-color: red;
+        transform: rotate(135deg);
+    }
+    100%{
+        background-color: rebeccapurple;
+        transform: rotate(175deg);
+    }
+}
+@keyframes my-anime {
+    0% {
+        transform: translateX(0) rotate(360deg);
+    }
+
+    25% {
+        transform: translateX(400px) rotate(720deg);
+        background-color: black;
+    }
+
+    50% {
+        transform: translateX(400px) translateY(400px) rotate(1080deg);
+        background-color: blue;
+    }
+
+    75% {
+        transform: translateX(0) translateY(400px) rotate(1440deg);
+        background-color: green;
+    }
+
+    100% {
+        transform: translateX(0) rotate(1800deg);
+    }
+
+    /* from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(400px);
+    } */
+}
